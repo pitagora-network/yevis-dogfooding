@@ -1,0 +1,28 @@
+---
+id: 39bdced7-6204-4e68-9ff0-7c7b9bc0e9c4
+version: 1.0.0
+license: CC0-1.0
+authors:
+  - github_account: ddbj
+    name: ddbj-workflow
+    affiliation: DNA Data Bank of Japan
+  - github_account: inutano
+    name: Tazro Inutano Ohta
+    affiliation: "@dbcls "
+    orcid: 0000-0003-3777-5945
+workflow:
+  name: download-sra
+  readme: "https://raw.githubusercontent.com/pitagora-network/pitagora-cwl/de34ec1b30b4b2bf58117130973ab5efac65daf3/README.md"
+  language:
+    type: CWL
+    version: v1.0
+  files:
+    - url: "https://raw.githubusercontent.com/pitagora-network/pitagora-cwl/de34ec1b30b4b2bf58117130973ab5efac65daf3/tools/download-sra/download-sra.cwl"
+      target: download-sra.cwl
+      type: primary
+  testing:
+    - id: test_1
+      files:
+        - url: "https://raw.githubusercontent.com/pitagora-network/pitagora-cwl/de34ec1b30b4b2bf58117130973ab5efac65daf3/workflows/download-fastq/download-fastq.yml"
+          target: wf_params.yml
+          type: wf_params
